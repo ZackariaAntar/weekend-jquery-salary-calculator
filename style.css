@@ -26,10 +26,14 @@ table{
     border: 2px solid rgb(0, 0, 0)
 
 }
+table thead{
+    margin: 0px;
+}
 
 #header{
     background-color: rgb(78, 140, 254) ;
 }
 table tbody{
     text-align: center;
+    border: 2px solid black;
 }

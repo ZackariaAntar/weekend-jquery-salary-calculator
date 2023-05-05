@@ -12,8 +12,6 @@ let monthlyAverage= 0;
 
 function fillTable(event){
     event.preventDefault();
-    console.log('heyyyy');
-
 
 	let firstName = $('#em-first-name').val()
     let lastName = $('#em-last-name').val() ;
@@ -24,25 +22,12 @@ function fillTable(event){
 
     $("table tbody").append(`<tr><td class= "name"> ${firstName} ${lastName}</td> <td class="id">${id}</td><td class="title">${title}</td><td class="salary">$${salary}</td><td>${button}</td></tr>`);
 
+    $("#em-first-name").val('');
+	$("#em-last-name").val('');
+	$("#em-id").val('');
+	$("#em-title").val('');
+	$("#em-salary").val('');
 
-
-
-    // TR
-	// TD name
-	// TD id
-	// TD title
-	// TD salary
-    // TD button
-	// TR
-    // <input placeholder="First Name" class="text-field" id="em-first-name" type="text">
-
-    //     <input placeholder="Last Name" class="text-field" id="em-last-name" type="text">
-
-    //     <input placeholder="ID" class="text-field" id="em-id" type="text">
-
-    //     <input placeholder="Title" class="text-field" id="em-title" type="text">
-
-    //     <input placeholder="Annual Salary" class="text-field" id="em-salary" type="text"></input>
 
 }
 
