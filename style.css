@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 5vw;
+    justify-content: center;
+    align-content: center;
+
+
+}
+
+h1{
+    text-align: center;
+    size: 5vh;
+    margin-bottom: 35px;
+}
+
+form{
+
+}
+
+table{
+    margin-top: 5vh;
+    border: 2px solid rgb(0, 0, 0)
+
+}
+
+#header{
+    background-color: rgb(78, 140, 254) ;
+}
+table tbody{
+    text-align: center;
+}

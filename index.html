@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js" ></script>
+    <script src="script.js"></script>
     <title>Salary Calculator App</title>
 </head>
-<header>
-
-</header>
 <body>
-   <form id="">
+    <h1>Salary Calculator</h1>
+   <form id="entry-fields">
         <input placeholder="First Name" class="text-field" id="em-first-name" type="text">
 
         <input placeholder="Last Name" class="text-field" id="em-last-name" type="text">
@@ -25,13 +26,21 @@
 
    </form>
    <table id ="employee-data">
-        <tr id="header">
-            <th>NAME</th>
-            <th>ID</th>
-            <th>TITLE</th>
-            <th>SALARY</th>
-            <th>DELETE?</th>
-        </tr>
+        <thead id="header">
+            <tr>
+                <th>NAME</th>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>SALARY</th>
+                <th>DELETE?</th>
+            </tr>
+
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+
+
 
 
    </table>

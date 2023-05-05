@@ -1,9 +1,9 @@
 $(document).ready(onReady)
 
 function onReady(){
-    $("#submit-btn").on("submit", fillTable);
-    $('#!table!').on('click', '.table-button', removeData)
-    removeData()
+    $("#submit-btn").on("click", fillTable);
+    // $('#!table!').on('click', '.table-button', removeData)
+    // removeData()
 
 
 }
@@ -11,17 +11,21 @@ function onReady(){
 let monthlyAverage= 0;
 
 function fillTable(event){
-	let name = (`${$('em-first-name').val()} ${$('em-last-name')}`) ;
-    let id = $('em-id').val();
-    let title = $('em-title').val();
-    let salary = $('em-salary').val();
-    let button = <button id= 'removeRow'>❌</button>;
-
-    $("#table").append(`<tr> <td class = "name"> ${name}</td> <td class = "id"> ${id} </td> <td class = "title> ${title}</td> <td class='salary'>${Number(salary)}</td> <td>>${button}</td></tr>`);
+    event.preventDefault();
+    console.log('heyyyy');
 
 
+	let firstName = $('#em-first-name').val()
+    let lastName = $('#em-last-name').val() ;
+    let id = $('#em-id').val();
+    let title = $('#em-title').val();
+    let salary = $('#em-salary').val();
+    let button = '<button id= "removeRow">❌</button>';
 
-doTheMath()
+    $("table tbody").append(`<tr><td class= "name"> ${firstName} ${lastName}</td> <td class="id">${id}</td><td class="title">${title}</td><td class="salary">$${salary}</td><td>${button}</td></tr>`);
+
+
+
 
     // TR
 	// TD name
@@ -39,7 +43,7 @@ doTheMath()
     //     <input placeholder="Title" class="text-field" id="em-title" type="text">
 
     //     <input placeholder="Annual Salary" class="text-field" id="em-salary" type="text"></input>
-    event.preventDefault()
+
 }
 
 function removeData(){
