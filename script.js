@@ -17,16 +17,20 @@ function fillTable(event){
     let lastName = $('#em-last-name').val() ;
     let id = $('#em-id').val();
     let title = $('#em-title').val();
-    let salary = $('#em-salary').val();
+    let salary = Number($('#em-salary').val());
     let button = '<button id= "removeRow">❌</button>';
 
     $("table tbody").append(`<tr><td class= "name"> ${firstName} ${lastName}</td> <td class="id">${id}</td><td class="title">${title}</td><td class="salary">$${salary}</td><td>${button}</td></tr>`);
+    doTheMath(salary);
+
+    
 
     $("#em-first-name").val('');
 	$("#em-last-name").val('');
 	$("#em-id").val('');
 	$("#em-title").val('');
 	$("#em-salary").val('');
+
 
 
 }
@@ -36,8 +40,7 @@ function removeData(){
 
 }
 
-function doTheMath(){
-	// monthlyAverage += salary
-	// console.log($(".salary").val());
-	// return monthlyAverage/12
+function doTheMath(value){
+	monthlyAverage += value/12
+
 }

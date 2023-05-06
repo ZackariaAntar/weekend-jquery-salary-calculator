@@ -9,8 +9,10 @@
     <script src="script.js"></script>
     <title>Salary Calculator App</title>
 </head>
+
 <body>
     <h1>Salary Calculator</h1>
+    <h2>Add Employee</h2>
    <form id="entry-fields">
         <input placeholder="First Name" class="text-field" id="em-first-name" type="text">
 
@@ -25,7 +27,12 @@
         <button id="submit-btn">Submit</button>
 
    </form>
+   <h2>Employees</h2>
    <table id ="employee-data">
+    <colgroup>
+        <col>
+
+    </colgroup>
         <thead id="header">
             <tr>
                 <th>NAME</th>
@@ -39,10 +46,11 @@
         <tbody id="table-body">
 
         </tbody>
+        <tfoot id="table-footer">
 
-
-
-
+        </tfoot>
    </table>
+
 </body>
+
 </html>
