@@ -22,8 +22,9 @@ function fillTable(event){
 
     $("table tbody").append(`<tr><td class= "name"> ${firstName} ${lastName}</td> <td class="id">${id}</td><td class="title">${title}</td><td class="salary">$${salary}</td><td>${button}</td></tr>`);
     doTheMath(salary);
+    $("#total-monthly").append(`Total Monthly: $${monthlyAverage}`)
 
-    
+
 
     $("#em-first-name").val('');
 	$("#em-last-name").val('');
