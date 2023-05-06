@@ -1,9 +1,9 @@
 $(document).ready(onReady)
 
 function onReady(){
-    $("#submit-btn").on("click", fillTable);
-    $('#employee-data').on('click', '#removeRow', removeData)
-    // removeData()
+    $("#submit-btn").on("click", fillTable); // registering event handlers
+    $('#employee-data').on('click', '#removeRow', removeData);
+
 
 
 }
@@ -20,11 +20,17 @@ function fillTable(event){
     let salary = Number($('#em-salary').val());
     let button = '<button id= "removeRow">❌</button>';
 
-    $("table tbody").append(`<tr><td class= "name"> ${firstName} ${lastName}</td> <td class="id">${id}</td><td class="title">${title}</td><td class="salary">$${salary}</td><td>${button}</td></tr>`);
-    doTheMath(salary);
-    $("#total-monthly").append(`${monthlyAverage}`)
-
-
+    $("table tbody").append(`
+                            <tr>
+                                <td class= "name"> ${firstName} ${lastName}</td>
+                                <td class="id">${id}</td>
+                                <td class="title">${title}</td>
+                                <td class="salary">$${salary}</td>
+                                <td>${button}</td>
+                            </tr>
+                            `
+     );
+    doTheMath(salary, 1);
 
     $("#em-first-name").val('');
 	$("#em-last-name").val('');
@@ -33,15 +39,20 @@ function fillTable(event){
 	$("#em-salary").val('');
 
 
-
 }
 
 function removeData(){
+    let updateTotal = $(this).closest("tr").children("td.salary").text().replace('$','');
     $(this).closest('tr').remove()
+    doTheMath(updateTotal, -1);
+
 
 }
 
-function doTheMath(value){
-	monthlyAverage += value/12
+function doTheMath(addedValue, multiplier){
+	monthlyAverage += (addedValue/12) * multiplier
+    $("#monthly-value").text(monthlyAverage);
+    // if ($())
+
 
 }

@@ -49,10 +49,17 @@ table tbody{
     text-align: center;
     border: 2px solid black;
 }
+table tfoot{
+    margin-bottom: 2vh;
+}
+
 #total{
+    display: grid;
+    grid-template-columns: 80% 20%;
     margin-inline: 5vw;
     background-color: bisque;
     border: 1px solid black;
+    height: 6vh;
 }
 #total-monthly{
     text-align: right;
