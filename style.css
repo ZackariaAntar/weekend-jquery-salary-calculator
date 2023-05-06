@@ -55,7 +55,7 @@ table tfoot{
 
 #total{
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 70% 30%;
     margin-inline: 5vw;
     background-color: bisque;
     border: 1px solid black;
