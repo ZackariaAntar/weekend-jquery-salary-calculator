@@ -1,9 +1,5 @@
 # Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+jQuery Salary Calculator.
 
 ## Description
-
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+A simple web app that allows a user to easily enter their employees' information to keep track of monthly salary expenditure. The user manually inputs the necessary information, and the app does the rest. If the expenditure is over $20,000, this app will display the monthly expenditure in RED signifying that the user is over budget. 
