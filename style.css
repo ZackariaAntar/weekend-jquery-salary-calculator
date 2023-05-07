@@ -1,9 +1,18 @@
 body{
+   background-color: #f0f8ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #363636;
+
+}
+
+html, body {
+  min-height: 100vh;
+  margin: auto;
+}
+
+body{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0px;
 
 }
 
@@ -11,57 +20,59 @@ h1{
     text-align: center;
     font-size: 5vh;
     margin: 0px;
-    background-color: grey;
+    background-color: #1a364e;
+    color: aliceblue;
 }
-h2{
-    padding-left: 5vw;
-
+main{
+    flex:auto;
+    max-width: 80%;
+    margin:auto;
 }
-
-form{
-    padding-left: 5vw;
-    padding-right: 5vw;
-
+input {
+  padding: .5em;
+  width: 150px;
+  background: #FCFCFC;
+  border: 1px solid;
 }
-
-table{
-    margin-top: .25vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
-
-
-}
-tr{
-    border: 1px solid black;
-
-}
-td{
-    border: 1px solid black;
-
-}
-table thead{
-    margin: 0px;
-    background-color: rgb(78, 140, 254) ;
+button {
+  padding: .5em;
+  width: 75px;
 }
 
-table tbody{
-    margin:0px;
-    text-align: center;
-    border: 2px solid black;
+table {
+  width: 100%;
+  text-align: left;
 }
-table tfoot{
-    margin-bottom: 2vh;
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 2.15em;
 }
+th, td {
+  padding: .5em;
+  min-width: 3.5em;
+}
+thead {
+  background: #7a7a7a;
+  color: #fcfcfc;
+}
+tbody tr:nth-child(odd){
+  background: #fcfcfc;
+}
+tbody tr:nth-child(even){
+  background: #dcdcdc;
+}
+
 
 #total{
     display: grid;
     grid-template-columns: 70% 30%;
-    margin-inline: 5vw;
-    background-color: bisque;
+    background-color: #1a364e;
+    color: aliceblue;
     border: 1px solid black;
     height: 6vh;
 }
 #total-monthly{
-    text-align: right;
+    text-align: left;
     padding-right: 5vw;
 }
