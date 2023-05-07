@@ -11,57 +11,65 @@
 </head>
 
 <body>
-    <h1>Salary Calculator</h1>
-    <h2>Add Employee</h2>
-   <form id="entry-fields">
-        <input placeholder="First Name" class="text-field" id="em-first-name" type="text">
+    <header>
+        <h1>Salary Calculator</h1>
+    </header>
 
-        <input placeholder="Last Name" class="text-field" id="em-last-name" type="text">
+    <main>
+        <section>
+            <h2>Add Employee</h2>
+        </section>
 
-        <input placeholder="ID" class="text-field" id="em-id" type="text">
+        <section>
+            <form id="entry-fields">
+                <input placeholder="First Name" class="text-field" id="em-first-name" type="text">
 
-        <input placeholder="Title" class="text-field" id="em-title" type="text">
+                <input placeholder="Last Name" class="text-field" id="em-last-name" type="text">
 
-        <input placeholder="Annual Salary" class="text-field" id="em-salary" type="text">
+                <input placeholder="ID" class="text-field" id="em-id" type="text">
 
-        <button id="submit-btn">Submit</button>
+                <input placeholder="Title" class="text-field" id="em-title" type="text">
 
-   </form>
+                <input placeholder="Annual Salary" class="text-field" id="em-salary" type="text">
 
-   <h2>Employees</h2>
+                <button id="submit-btn">Submit</button>
+            </form>
+        </section>
+        <section>
+            <h2>Employees</h2>
 
-   <table id ="employee-data">
-        <thead id="header">
-            <tr>
-                <th>NAME</th>
-                <th>ID</th>
-                <th>TITLE</th>
-                <th>SALARY</th>
-                <th>DELETE?</th>
-            </tr>
+            <table id ="employee-data">
+                    <thead id="header">
+                        <tr>
+                            <th>NAME</th>
+                            <th>ID</th>
+                            <th>TITLE</th>
+                            <th>SALARY</th>
+                            <th>DELETE?</th>
+                        </tr>
 
-        </thead>
-        <tbody id="table-body">
+                    </thead>
+                    <tbody id="table-body">
 
-        </tbody>
-        <tfoot>
-            <tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
 
-            </tr>
-        </tfoot>
-   </table>
+                        </tr>
+                    </tfoot>
+            </table>
+             <div id="total">
+                <p id ="empty"></p>
 
-   <div id="total">
-    <p id ="empty">
+                <p id="total-monthly">
+                    Total Monthly: $<span id="monthly-value"></span>
+                </p>
 
-    </p>
+            </div>
 
-    <p id="total-monthly">
-        Total Monthly: $<span id="monthly-value"></span>
-    </p>
+        </section>
 
-   </div>
-
+   </main>
 
 </body>
 
