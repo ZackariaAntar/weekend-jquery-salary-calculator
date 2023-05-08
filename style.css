@@ -19,7 +19,6 @@ header{
     display: flex;
     background-color: #1a364e;
     height: 10vh;
-    border: 1px solid red;
     align-items: center;
     justify-content: center;
 }
