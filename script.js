@@ -20,7 +20,7 @@ function fillTable(event) {
 	$("table tbody").append(`
                             <tr>
                                 <td class= "name"> ${firstName}</td>
-                                <td> class="lastName" ${lastName}</td>
+                                <td class="lastName"> ${lastName}</td>
                                 <td class="id">${id}</td>
                                 <td class="title">${title}</td>
                                 <td class="salary">$${salary}</td>
@@ -47,7 +47,7 @@ function removeData() { // removes rows from the table when button is pressed an
 }
 
 function doTheMath(addedValue, multiplier) { // calculates the average monthly salary expense and changes the css of the value on the DOM if above or below $20000.
-	monthlyAverage += (addedValue / 12) * multiplier;// stored salary input in monthlyAverage, then divides by 12 to reflect a monthly average, and multiplies by a potitive or negative multiplier to either increase or decrease based on if we are adding or removing a salary from the table. 
+	monthlyAverage += (addedValue / 12) * multiplier;// stored salary input in monthlyAverage, then divides by 12 to reflect a monthly average, and multiplies by a potitive or negative multiplier to either increase or decrease based on if we are adding or removing a salary from the table.
 	$("#monthly-value").text(Math.round(monthlyAverage * 100) / 100); // rounds the averge expense to reflect standard currency conventions.
 	if (monthlyAverage < 20000) { // conditional that invokes css change based on averge monthly salry expense.
 		$("#total-monthly").css("background-color", "green");
